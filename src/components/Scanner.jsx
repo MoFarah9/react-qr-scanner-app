@@ -25,7 +25,13 @@ export default function Scanner() {
 
   return (
     <div className="scanner">
-      <QrReader delay={delay} style={previewStyle} onError={handleError} onScan={handleScan} />
+      <QrReader
+        delay={delay}
+        style={previewStyle}
+        onError={handleError}
+        onScan={handleScan}
+        facingMode="rear"
+      />
 
       <div className="note">Place code inside the frame below</div>
       <div className="overlay">
