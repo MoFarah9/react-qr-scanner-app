@@ -1,13 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-family: sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.scanner {
+  position: relative;
+}
+
+.result {
+  position: absolute;
+  width: 100%;
+  bottom: 3rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 0 99999px rgb(0 0 0 / 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.corners {
+  width: 100%;
+  height: 100%;
+  min-width: calc(300px - 0.5rem);
+  min-height: calc(300px - 0.5rem);
+}
+
+.note {
+  position: absolute;
+  top: 18%;
+  z-index: 10;
+  width: 100%;
+  color: #999;
+  font-weight: bold;
+}
+
+.scanning-line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: scanning 2s infinite;
+}
+
+@keyframes scanning {
+  50% {
+    transform: translateY(300px);
+  }
 }
