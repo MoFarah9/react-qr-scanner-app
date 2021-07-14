@@ -50,12 +50,12 @@ body {
   position: relative;
   width: 300px;
   height: 300px;
-  box-shadow: 0 0 0 99999px rgb(0 0 0 / 75%);
+  box-shadow: 0 0 0 99999px rgb(0 0 0 / 35%);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  backdrop-filter: contrast(0.9);
+  backdrop-filter: contrast(0.95);
 }
 
 .corners {
